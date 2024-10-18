@@ -24,7 +24,7 @@ install the dependencies:
 
 #### App:
 
-- Navegation through Bottom Tabs and dragging to the sides of the screen.
+- Navegation through Bottom Tabs and dragging to the sides of the screen with react navagation.
 
 #### Page One:
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Button, SafeAreaView } from 'react-native';
 import { TabView, SceneMap, TabBar } from 'react-native-tab-view';
 import Icon from 'react-native-vector-icons/Ionicons';
 
@@ -16,6 +16,7 @@ const renderScene = SceneMap({
 });
 
 export default function App() {
+  const [welcome, setWelcome] = useState(false);
   const [index, setIndex] = useState(0);
   const [routes] = useState([
     { key: 'first', title: 'One' },
@@ -44,20 +45,38 @@ export default function App() {
   );
 
   return (
-    <View style={{ flex: 1 }}>
-      <TabView
-        navigationState={{ index, routes }}
-        renderScene={renderScene}
-        onIndexChange={setIndex}
-        initialLayout={{ width: 400 }} // Ajuste conforme necessário
-        renderTabBar={renderTabBar}
-        style={{ flex: 1 }}
-      />
+    <View style={{ flex: 1, backgroundColor: 'lightblue' }}>
+      {!welcome ?
+        <SafeAreaView style={styles.container}>
+          <Text style={{marginBottom: 50}}>Welcome to a Test App</Text>
+          <Button
+            title='Click to start'
+            onPress={() => setWelcome(true)}
+          />
+        </SafeAreaView>
+      :  
+        <TabView
+          navigationState={{ index, routes }}
+          renderScene={renderScene}
+          onIndexChange={setIndex}
+          initialLayout={{ width: 400 }} // Ajuste conforme necessário
+          renderTabBar={renderTabBar}
+          style={{ flex: 1 }}
+        />
+      }
     </View>
   );
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1, 
+    backgroundColor: 'lightyellow', 
+    paddingTop: '8%',
+    paddingHorizontal:'4%',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   tabBar: {
     backgroundColor: 'white',
     position: 'absolute',
