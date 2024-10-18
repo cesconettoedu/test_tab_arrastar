@@ -14,7 +14,7 @@ export default Third
 const styles = StyleSheet.create({
   container: {
     flex: 1, 
-    backgroundColor: 'lightblue', 
+    backgroundColor: 'lightgreen', 
     justifyContent: 'center', 
     alignItems: 'center'
   }
