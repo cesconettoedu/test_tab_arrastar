@@ -27,10 +27,7 @@ const One = () => {
           <Text style={styles.title}>One Test - input com KeyboardAvoidingView</Text>
           <Text style={styles.title}>One Test - input com KeyboardAvoidingView</Text>
           <Text style={styles.title}>One Test - input com KeyboardAvoidingView</Text>
-          <Text style={styles.title}>One Test - input com KeyboardAvoidingView</Text>
-          <Text style={styles.title}>One Test - input com KeyboardAvoidingView</Text>
-          <Text style={styles.title}>One Test - input com KeyboardAvoidingView</Text>
-          <Text style={styles.title}>One Test - input com KeyboardAvoidingView</Text>
+ 
           <TextInput
             style={styles.input}
             placeholder="_ _ _ _ _ _ _ _ "

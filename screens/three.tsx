@@ -1,15 +1,15 @@
 import { View, Text, StyleSheet  } from 'react-native'
 import React from 'react'
 
-const Third = () => {
+const Three = () => {
   return (
     <View style={styles.container}>
-      <Text>Third Test</Text>
+      <Text>Three Test</Text>
     </View>
   )
 }
 
-export default Third
+export default Three
 
 const styles = StyleSheet.create({
   container: {
