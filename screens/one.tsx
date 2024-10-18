@@ -16,15 +16,15 @@ const One = () => {
           contentContainerStyle={{flexGrow: 1}}
         >
           <Text style={styles.title}>One Test - input com Keyboard Avoiding View One Test - input com Keyboard Avoiding View One Test - input com KeyboardAvoidingView</Text>
-          <Text style={styles.title}>One Test - input com KeyboardAvoidingView</Text>
+          <Text style={styles.title}>One Test - SafeAreaView</Text>
           <Text style={styles.title}>One Test - input com KeyboardAvoidingView</Text>
           <Text style={styles.title}>One Test - input com KeyboardAvoidingView</Text>
           <Text style={styles.title}>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</Text>
           <Text style={styles.title}>One Test - input com KeyboardAvoidingView</Text>
           <Text style={styles.title}>One Test - input com KeyboardAvoidingView</Text>
+          <Text style={styles.title}>One Test - SafeAreaView</Text>
           <Text style={styles.title}>One Test - input com KeyboardAvoidingView</Text>
-          <Text style={styles.title}>One Test - input com KeyboardAvoidingView</Text>
-          <Text style={styles.title}>One Test - input com KeyboardAvoidingView</Text>
+          <Text style={styles.title}>One Test - SafeAreaView</Text>
           <Text style={styles.title}>One Test - input com KeyboardAvoidingView</Text>
           <Text style={styles.title}>One Test - input com KeyboardAvoidingView</Text>
  

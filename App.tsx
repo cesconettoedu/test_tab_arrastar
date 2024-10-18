@@ -1,8 +1,3 @@
-// consegui usando              
-// expo install react-native-tab-view
-// npm install --save react-native-vector-icons   , depois    npm i --save-dev @types/react-native-vector-icons
-
-
 import React, { useState } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { TabView, SceneMap, TabBar } from 'react-native-tab-view';

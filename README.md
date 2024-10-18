@@ -17,3 +17,21 @@ install the dependencies:
     npm install --save react-native-vector-icons
     (if complaint install the second away)
     npm i --save-dev @types/react-native-vector-icons
+
+    npm i expo-linear-gradient
+
+## Testing
+
+#### App:
+
+- Navegation through Bottom Tabs and dragging to the sides of the screen.
+
+#### Page One:
+
+- SafeAreaView
+- KeyboardAvoidingView in input field
+
+#### Page Two:
+
+- Flatlist with gradient on start and end of the list
+- Use useState to set the object properties and show below
