@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1, 
     backgroundColor: 'lightblue', 
-    paddingTop: '8%',
+    paddingTop: '10%',
     paddingHorizontal:'4%'
   },
   avoidingView: {
