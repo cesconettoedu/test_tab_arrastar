@@ -5,14 +5,16 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 import OnePage from './screens/one'
 import TwoPage from './screens/two'
-import ThreePAge from './screens/three';
+import ThreePage from './screens/three';
+import FourPage from './screens/four';
 
 
 // Definindo as cenas
 const renderScene = SceneMap({
   first: OnePage,
   second: TwoPage,
-  third: ThreePAge,
+  third: ThreePage,
+  fourth: FourPage,
 });
 
 export default function App() {
@@ -21,7 +23,8 @@ export default function App() {
   const [routes] = useState([
     { key: 'first', title: 'One' },
     { key: 'second', title: 'Two' },
-    { key: 'third', title: 'Three' }
+    { key: 'third', title: 'Three' },
+    { key: 'fourth', title: 'Four' }
   ]);
 
   const renderTabBar = props => (
@@ -32,7 +35,7 @@ export default function App() {
       renderLabel={({ route, focused }) => (
         <View style={styles.labelContainer}>
           <Icon 
-            name={route.key === 'first' ? 'home' : route.key === 'second' ? 'settings' : 'person'} 
+            name={route.key === 'first' ? 'home' : route.key === 'second' ? 'settings' : route.key === 'third' ? 'flag' : 'person'} 
             size={20} 
             color={focused ? '#1877cf' : '#080808'} 
           />
