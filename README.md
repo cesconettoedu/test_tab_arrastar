@@ -4,7 +4,7 @@ A project to test an easy way to implement Tabs with drag navigation
 
 And within each page a test, for example on page one, testing SafeAreaView, KeyboardAvoidingView
 
-## Get started
+## Get started (how a did)
 
 create a app:
 

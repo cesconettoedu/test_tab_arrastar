@@ -7,6 +7,7 @@ import OnePage from './screens/one'
 import TwoPage from './screens/two'
 import ThreePage from './screens/three';
 import FourPage from './screens/four';
+import FivePage from './screens/five';
 
 
 // Definindo as cenas
@@ -15,6 +16,7 @@ const renderScene = SceneMap({
   second: TwoPage,
   third: ThreePage,
   fourth: FourPage,
+  fifth: FivePage,
 });
 
 export default function App() {
@@ -24,10 +26,11 @@ export default function App() {
     { key: 'first', title: 'One' },
     { key: 'second', title: 'Two' },
     { key: 'third', title: 'Three' },
-    { key: 'fourth', title: 'Four' }
+    { key: 'fourth', title: 'Four' },
+    { key: 'fifth', title: 'Five' }
   ]);
 
-  const renderTabBar = props => (
+  const renderTabBar = (props) => (
     <TabBar
       {...props}
       style={styles.tabBar}
@@ -35,7 +38,7 @@ export default function App() {
       renderLabel={({ route, focused }) => (
         <View style={styles.labelContainer}>
           <Icon 
-            name={route.key === 'first' ? 'home' : route.key === 'second' ? 'settings' : route.key === 'third' ? 'flag' : 'person'} 
+            name={route.key === 'first' ? 'home' : route.key === 'second' ? 'settings' : route.key === 'third' ? 'flag' : route.key === 'fourth' ? 'cart' : 'person'} 
             size={20} 
             color={focused ? '#1877cf' : '#080808'} 
           />

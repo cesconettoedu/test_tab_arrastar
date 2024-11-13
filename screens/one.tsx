@@ -33,14 +33,14 @@ const One = () => {
             placeholder="_ _ _ _ _ _ _ _ "
             placeholderTextColor={'#1b1a1b'}
             value={symbolInput}
-            onChangeText={setSymbolInput}
+            onChangeText={() => setSymbolInput}
           />
           <TextInput
             style={styles.input}
             placeholder="_ _ _ _ _ _ _ _ "
             placeholderTextColor={'#1b1a1b'}
             value={symbolInput}
-            onChangeText={setSymbolInput}
+            onChangeText={() => setSymbolInput}
           />
         </ScrollView>
       </KeyboardAvoidingView>      

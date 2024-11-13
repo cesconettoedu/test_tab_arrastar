@@ -7,14 +7,14 @@ const Two = () => {
   const [selected, setSelected] = useState([]);
 
   const items = [
-    { id: 1, icon: 'logo-apple', name: 'Apple', color: '#FFB3BA', year: 2021, place: 'Brazil' },
-    { id: 2, icon: 'person', name: 'Banana', color: '#FFDFBA', year: 2020, place: 'Canada' },
-    { id: 3, icon: 'accessibility-outline', name: 'Mango', color: '#FFFFBA', year: 2022, place: 'Costa Rica' },
-    { id: 4, icon: 'alarm-outline', name: 'Orange', color: '#BAFFC9', year: 2019, place: 'USA' },
-    { id: 5, icon: 'american-football-outline', name: 'Lemmon', color: '#7fbceb', year: 2023, place: 'Dinamarca' },
-    { id: 6, icon: 'aperture-outline', name: 'Cherry', color: '#bfa1f0', year: 2021, place: 'Italy' },
-    { id: 7, icon: 'archive-outline', name: 'Watermelon', color: '#FFB3E6', year: 2020, place: 'Germany' },
-    { id: 8, icon: 'bag-check', name: 'Peach', color: '#D9B3FF', year: 2022, place: 'South Africa' },
+    { id: 1, icon: 'logo-apple', name: 'Apple', color: '#FFB3BA', year: 2021, colorName: 'Pink' },
+    { id: 2, icon: 'person', name: 'Banana', color: '#FFDFBA', year: 2020, colorName: 'Orange' },
+    { id: 3, icon: 'accessibility-outline', name: 'Mango', color: '#FFFFBA', year: 2022, colorName: 'Yellow' },
+    { id: 4, icon: 'alarm-outline', name: 'Orange', color: '#BAFFC9', year: 2019, colorName: 'Green' },
+    { id: 5, icon: 'american-football-outline', name: 'Lemmon', color: '#7fbceb', year: 2023, colorName: 'Blue' },
+    { id: 6, icon: 'aperture-outline', name: 'Cherry', color: '#bfa1f0', year: 2021, colorName: 'Purple' },
+    { id: 7, icon: 'archive-outline', name: 'Watermelon', color: '#FFB3E6', year: 2020, colorName: 'LightPink' },
+    { id: 8, icon: 'bag-check', name: 'Peach', color: '#D9B3FF', year: 2022, colorName: 'LightPurple' },
   ];
 
 
@@ -61,7 +61,7 @@ const Two = () => {
         <Text> Fields: </Text>
         <Text style={{fontSize: 20}}> {selected.id}</Text>
         <Text style={{fontSize: 20}}> {selected.name}</Text>
-        <Text style={{fontSize: 20}}> {selected.place}</Text>
+        <Text style={{fontSize: 20}}> {selected.colorName}</Text>
         <Text style={{fontSize: 20}}> {selected.year}</Text>
       </View>
     </View>
