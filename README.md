@@ -35,3 +35,15 @@ install the dependencies:
 
 - Flatlist with gradient on start and end of the list
 - Use useState to set the object properties and show below
+
+#### Page Three:
+
+- Use
+
+#### Page Four:
+
+- Use
+
+#### Page Five:
+
+- Use
