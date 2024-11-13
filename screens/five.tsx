@@ -11,6 +11,8 @@ const Five = () => {
   const [hour, setHour] = useState(''); // Hora do evento
   const [minute, setMinute] = useState(''); // Minuto do evento
 
+  const [reload, setReload] = useState(false)
+
   // Função para solicitar permissões
   const requestPermissions = async () => {
     const { status } = await Calendar.requestCalendarPermissionsAsync();
@@ -77,6 +79,17 @@ const Five = () => {
         // Imprime as configurações do evento, incluindo os alarmes
         const eventDetails = await Calendar.getEventAsync(eventId);
         console.log('Detalhes do evento criado:', eventDetails);
+
+
+        //para limpar o campo
+        setEventTitle('');
+        setDate('');
+        setHour('');
+        setMinute('');
+
+
+
+
       } else {
         Alert.alert('Erro', 'O evento não foi criado.');
       }
@@ -133,7 +146,7 @@ const Five = () => {
     };
 
     fetchEvents();
-  }, []); // O array vazio [] significa que o efeito será executado uma vez, logo após o primeiro render
+  }, [reload]); // O array vazio [] significa que o efeito será executado uma vez, logo após o primeiro render
 
   // Função para excluir um evento baseado no ID
   const deleteEvent = async () => {
@@ -165,6 +178,8 @@ const Five = () => {
     }
   };
 
+
+
   return (
     <View style={styles.container}>
       <View style={styles.contDelete}>
@@ -185,26 +200,28 @@ const Five = () => {
         value={eventTitle}
         onChangeText={setEventTitle}
       />
-      <TextInput
-        style={styles.input}
-        placeholder="Data (YYYY-MM-DD)"
-        value={date}
-        onChangeText={setDate}
-      />
-      <TextInput
-        style={styles.input}
-        placeholder="Hora (0-23)"
-        value={hour}
-        onChangeText={setHour}
-        keyboardType="numeric"
-      />
-      <TextInput
-        style={styles.input}
-        placeholder="Minutos (0-59)"
-        value={minute}
-        onChangeText={setMinute}
-        keyboardType="numeric"
-      />
+      <View style={[styles.reload, {paddingTop: 5,marginBottom: 5 }]}>
+        <TextInput
+          style={styles.input}
+          placeholder="Data (YYYY-MM-DD)"
+          value={date}
+          onChangeText={setDate}
+        />
+        <TextInput
+          style={styles.input}
+          placeholder="Hora (0-23)"
+          value={hour}
+          onChangeText={setHour}
+          keyboardType="numeric"
+        />
+        <TextInput
+          style={styles.input}
+          placeholder="Minutos (0-59)"
+          value={minute}
+          onChangeText={setMinute}
+          keyboardType="numeric"
+        />
+      </View>
       <TouchableOpacity style={styles.deleteBtn} onPress={() => {
         requestPermissions(); // Certifica-se de que as permissões são solicitadas
         createEvent();
@@ -214,8 +231,15 @@ const Five = () => {
         </Text>
       </TouchableOpacity>
   
-
-      <Text style={{fontWeight: 'bold', fontSize: 20, paddingTop: 20, textDecorationLine: 'underline'}}>Eventos Criados</Text>
+      <View style={styles.reload}>
+        <Text style={{fontWeight: 'bold', fontSize: 20, textDecorationLine: 'underline'}}>Eventos Criados</Text>
+        <Text>{events.length}</Text>
+        <TouchableOpacity 
+          style={{backgroundColor:'#007BFF',padding: 5,borderRadius: 5,}} 
+          onPress={() => {setReload(!reload)}}>
+            <Text style={styles.textbtn}>Reload</Text>
+        </TouchableOpacity>
+      </View>
       {/* Exibe todos os eventos na tela */}
       <ScrollView contentContainerStyle={{paddingTop:10, paddingBottom:'40%'}}>
         {events
@@ -250,7 +274,7 @@ const styles = StyleSheet.create({
   },
   input: {
     marginBottom: 10,
-    paddingHorizontal: 10,
+    paddingHorizontal: 5,
     borderColor: 'gray',
     borderWidth: 1,
     borderRadius: 5,
@@ -270,5 +294,13 @@ const styles = StyleSheet.create({
   textbtn: {
     textAlign:'center', 
     color:'#ffffff'
+  },
+  reload: {
+    flexDirection: 'row',
+    justifyContent:'center',
+    alignItems: 'center',
+    paddingTop: 20,
+    gap: 10,
   }
+
 })

@@ -46,4 +46,6 @@ install the dependencies:
 
 #### Page Five:
 
-- Use
+- instal 2 dependencies "expo-calendar": "~14.0.2" and "date-fns": "^4.1.0",
+- User can create a Alarm reminder that will popup 1 days before the event
+- Synchronize Expo calendar with device native calendar.
